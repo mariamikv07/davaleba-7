@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunset Animation</title>
+  <style>
+    /* Set up the sky background */
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to top, #FFCC99, #66B2FF);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    /* Create the sun */
+    .sun {
+      position: absolute;
+      bottom: 70%;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #FFD700, #FFA500);
+      border-radius: 50%;
+      animation: sunset 5s ease-in-out forwards;
+    }
+
+    /* Animate the sun setting */
+    @keyframes sunset {
+      from {
+        bottom: 70%;
+      }
+      to {
+        bottom: 30%;
+        opacity: 0.3;
+      }
+    }
+
+    /* Create the hill */
+    .hill {
+      position: absolute;
+      bottom: 0;
+      width: 150%;
+      height: 200px;
+      background: #228B22;
+      border-radius: 50% 50% 0 0;
+      transform: translateX(-25%);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="sun"></div>
+  <div class="hill"></div>
+</body>
+</html>
